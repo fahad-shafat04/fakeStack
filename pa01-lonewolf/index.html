@@ -1,0 +1,226 @@
+<html>
+
+<head>
+  <link rel="stylesheet" href="css/index.css">
+  <script type="module" src="src/index.js"></script>
+  <title style="text-align: center"> Fake Stack Overflow </title>
+
+  <style>
+    #showQuestionsPageContainer {
+      display: none;
+      text-align: center;
+      position: relative;
+      right: 200px;
+    }
+
+    #displayAnsweredQuestions {
+
+      text-align: left;
+      position: relative;
+      left: 200px;
+      top: 100px;
+    }
+  </style>
+
+</head>
+
+
+<body>
+
+  <aside>
+    <div class="sidebar">
+
+      <div class = "sidebar-questions" id = "showSidebarQuestionsContainer">
+
+      </div> 
+    <div class = "sidebar-tags" id = "showSidebarTagsContainer">
+
+      </div>
+    </div>
+  </aside>
+
+  <div class="homepage">
+    <header>
+      <h1 style="text-align: center">Fake Stack Overflow</h1>
+
+      <input type="text" placeholder="Search...">
+
+    </header>
+
+
+
+    <div class="vertical-dotted-line"></div>
+
+
+    <div id="header" class="header">
+
+
+      <div class="mainpage" id="showMainPageContainer">
+        <div class="AllQuestions">
+          <h2>All Questions</h2>
+        </div>
+
+        <div class="AskQuestions" id="ask-questions">
+
+          <button style="background-color: #0b79ee; color: white; border-radius: 0.5px; padding: 15px 10px;"
+            onclick="showQuestionsPageContainer()">Ask Question</button>
+
+        </div>
+
+        <div class="horizontal-dotted-line"></div>
+
+        <div class="button-row" id="button-row">
+          <button id="unansweredButton">Unanswered</button>
+          <button id="activeButton">Active</button>
+          <button id="newestButton">Newest</button>
+        </div>
+
+
+
+        <div class="questions-list">
+          <div class="views-and-answers">
+            <!-- 100 views -->
+          </div>
+        </div>
+
+        <div class="tags">
+
+        </div>
+
+
+        <div class="questions-page">
+
+        </div>
+      </div>
+
+
+      <div class="questions-list">
+        <!-- have an upper div for the answers, question title, and how long ago a person asked it -->
+        <!-- have an lower div for the views and tags-->
+        <div class="upper-part">
+          <div class="answers" id="answers">
+          </div>
+
+          <div class="title" id="title">
+            <!-- "navigating a react" -->
+          </div>
+          <!-- find id copy html and gi -->
+          <div class="how-long-ago" id="how-long-ago">
+
+          </div>
+        </div>
+
+        <div class="lower-part">
+          <div class="views" id="views">
+
+          </div>
+
+          <div class="tags" id="tags">
+
+          </div>
+
+          <div id="no-question-found" style="display:none">
+
+            <div id="search-results">
+              <h2> Search Results</h2>
+            </div>
+
+            <div id="zero-questions">
+              <p> 0 questions</p>
+            </div>
+
+            <div id="text-for-no-questions-found">
+              <h2>No Questions Found</h2>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="showQuestionsPage" id="showQuestionsPageContainer">
+        <div class="Question Title*">
+          <h2> Question Title*</h2>
+          <i> Limit title to 100 characters or less</i>
+        </div>
+
+        <input type="text" id="question-title" placeholder="" style="height:75px; width: 400px">
+
+        <div class="Question Text*">
+          <h2> Question Text*</h2>
+          <i> Add details</i>
+
+        </div>
+        <input type="text" id="question-text" placeholder="" style="height:175px; width: 400px">
+
+        <div class="Tags*">
+          <h2> Tags*</h2>
+          <i> Add keywords separated by whitespace</i>
+
+        </div>
+        <input type="text" id="question-tag" placeholder="" style="height:75px; width: 400px">
+
+        <div class="Username*">
+          <h2> Username*</h2>
+
+        </div>
+        <input type="text" id="question-username" placeholder="" style="height:75px; width: 400px">
+
+        <br>
+        <br>
+
+        <button style="background-color:#0b79ee;color:white;border-radius:0.5px;
+                padding:15px 10px" onclick="showMainPageContainer" id="post-question">Post Question</button>
+
+
+        <div class="*">
+          <p style="color:rgb(156, 20, 20); float:right; ">
+            *includes mandatory fields
+          </p>
+        </div>
+
+
+
+      </div>
+
+
+      <div class="showAnswersPage" id="showAnswersPageContainer" style="display:none">
+        <div class="AskQuestions" id="ask-questions">
+
+          <button style="background-color: #0b79ee; color: white; border-radius: 0.5px; padding: 15px 10px;"
+            onclick="showQuestionsPageContainer()">Ask Question</button>
+
+        </div>
+
+        <h2> id = "question-title"</h2>
+
+
+        <div class="ans-question" id="ans-question">
+          <button style="background-color: #0b79ee; color: white; border-radius: 0.5px; padding: 15px 10px;"
+            id="answer-question" onclick="showMainPageContainer()">Answer Question</button>
+        </div>
+
+      </div>
+
+      <script defer>
+        function showQuestionsPageContainer() {
+          document.getElementById('showMainPageContainer').style.display = 'none';
+
+          document.querySelector('.showQuestionsPage').style.display = 'block';
+        }
+
+        function showMainPageContainer() {
+          document.querySelector('.showQuestionsPage').style.display = 'none';
+
+          document.getElementById('showMainPageContainer').style.display = 'block';
+
+        }
+
+      </script>
+
+
+</body>
+
+
+</html>

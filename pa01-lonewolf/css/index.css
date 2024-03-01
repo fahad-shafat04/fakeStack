@@ -1,0 +1,86 @@
+/* Add CSS stylesheet */
+header {
+  background-color: #ddd;
+  padding: 15px;
+  position:relative;
+  top:1px;
+  }
+
+body {
+  font-family:'Trebuchet MS';
+}
+
+.button-row button {
+  font-family: 'Trebuchet MS';
+  color:black;
+  float:right;
+  height:30px;
+  width:100px;
+  position:relative;
+  right:50px;
+  bottom:10px;
+}
+
+  
+.sidebar {
+  margin-left:0%;
+  text-align:center;
+  position: relative;
+  width:100px;
+  margin-left:-20px;
+  top:250px;
+  left:110px;
+  font-size:25px;
+}
+
+.AllQuestions {
+  text-align: center;
+  margin-left: 50px;
+  font-size:20px;
+  
+  position: sticky;
+  bottom:70px;
+  right:475px;
+
+}
+.AskQuestions{
+  text-align:right;
+  position:relative;
+  height:20px;
+  right:50px;
+  bottom:50px;
+  border-radius: 0.5px; 
+  padding: 15px 10px;
+
+}
+
+.vertical-dotted-line {
+  width: 10px;
+  border-left: 2px dotted #000; /* Adjust the width and color of the dotted line */
+  height: 100vh;
+  position: fixed;
+  left: 18%;
+  top: 18.5%;
+}
+
+.horizontal-dotted-line {
+  width: 10px;
+  border-top: 2px dotted #000; /* Adjust the width and color of the dotted line */
+  position: fixed;
+  left: 18%;
+  top: 35%;
+  width: 90%; /* Set the width of the line */
+  margin: 20px auto; /* Center the line horizontally with margin */
+}
+
+.questions-list {
+  text-align:center;
+  position:relative;
+  right:100px;
+  top:80px;
+}
+
+.showQuestionsPageContainer {
+  text-align:center;
+}
+
